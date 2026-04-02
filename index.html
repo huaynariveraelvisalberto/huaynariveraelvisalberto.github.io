@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis Huayna Rivera | AI Engineer & Cybersecurity Specialist</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio de Elvis Huayna Rivera - AI Engineer especializado en LLM, RAG y chatbots inteligentes. También Cybersecurity Specialist en Blue Team, Pentesting y Full-Stack Development seguro. Arequipa, Perú.">
+    <meta name="keywords" content="AI Engineer, LLM, RAG, LangChain, Ollama, Chatbot, Ciberseguridad, Blue Team, Pentesting, Full-Stack Developer, SOC, Kali Linux, Arequipa, Peru">
+    <meta name="author" content="Elvis Huayna Rivera">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkedin.com/in/elvis-alberto-huayna-rivera-84906a37b/">
+    <meta property="og:title" content="Elvis Huayna Rivera | AI Engineer & Cybersecurity Specialist">
+    <meta property="og:description" content="AI Engineer | LLM & RAG Systems | Blue Team Specialist | Full-Stack Developer. Creando soluciones inteligentes seguras.">
+    <meta property="og:image" content="./foto2.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elvis Huayna | AI & Cybersecurity Portfolio">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23050505' width='100' height='100' rx='15'/%3E%3Cpath fill='%2300bfff' d='M50 15 L85 35 L85 65 L50 85 L15 65 L15 35 Z' opacity='0.9'/%3E%3Cpath fill='%23050505' d='M50 25 L75 40 L75 60 L50 75 L25 60 L25 40 Z'/%3E%3Ccircle fill='%2300bfff' cx='50' cy='50' r='8'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#050505',
+                            card: '#0c0c0c',
+                            border: '#1a1a1a',
+                            cyan: '#00bfff',
+                            green: '#00ff7f',
+                            dim: 'rgba(0, 191, 255, 0.15)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ============================================
+           BASE & CUSTOM STYLES
+           ============================================ */
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Selection */
+        ::selection {
+            background: rgba(0, 191, 255, 0.3);
+            color: #fff;
+        }
+
+        /* Grid Background */
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Glass Navigation */
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 191, 255, 0.08);
+        }
+
+        /* Cyber Card */
+        .cyber-card {
+            background: #0c0c0c;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cyber-card:hover {
+            border-color: rgba(0, 191, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 191, 255, 0.08),
+                        inset 0 0 40px rgba(0, 191, 255, 0.02);
+            transform: translateY(-2px);
+        }
+
+        /* Neon Text Glow */
+        .neon-cyan {
+            color: #00bfff;
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5),
+                         0 0 20px rgba(0, 191, 255, 0.3);
+        }
+
+        .neon-green {
+            color: #00ff7f;
+            text-shadow: 0 0 10px rgba(0, 255, 127, 0.5),
+                         0 0 20px rgba(0, 255, 127, 0.3);
+        }
+
+        /* Avatar with Animated Ring */
+        .avatar-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        .avatar-ring {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                #00bfff,
+                #00ff7f,
+                #00bfff,
+                #00ff7f,
+                #00bfff
+            );
+            animation: ring-rotate 4s linear infinite;
+        }
+
+        .avatar-ring::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: #050505;
+            border-radius: 50%;
+        }
+
+        @keyframes ring-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar-img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .avatar-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+
+        .avatar-img:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* Typing Cursor */
+        .cursor::after {
+            content: '▋';
+            animation: blink 0.8s infinite;
+            color: #00bfff;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Status Pulse */
+        .status-dot {
+            animation: pulse-ring 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 127, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(0, 255, 127, 0);
+            }
+        }
+
+        /* Skill Bar Animation */
+        .skill-bar-fill {
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #fff;
+            animation: skill-pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes skill-pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Terminal Loading */
+        .terminal-loader {
+            display: inline-flex;
+            gap: 3px;
+        }
+
+        .terminal-loader span {
+            width: 4px;
+            height: 4px;
+            background: #00bfff;
+            border-radius: 50%;
+            animation: terminal-bounce 1.4s ease-in-out infinite;
+        }
+
+        .terminal-loader span:nth-child(1) { animation-delay: 0s; }
+        .terminal-loader span:nth-child(2) { animation-delay: 0.2s; }
+        .terminal-loader span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes terminal-bounce {
+            0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
+            40% { transform: translateY(-6px); opacity: 1; }
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger Animation */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+
+        /* Tech Tag */
+        .tech-tag {
+            background: rgba(0, 191, 255, 0.08);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(0, 191, 255, 0.15);
+            border-color: rgba(0, 191, 255, 0.4);
+        }
+
+        /* Badge */
+        .badge {
+            background: rgba(0, 255, 127, 0.1);
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            color: #00ff7f;
+        }
+
+        .badge-cyan {
+            background: rgba(0, 191, 255, 0.1);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            color: #00bfff;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.open { transform: translateX(0); }
+
+        /* Nav Link Effect */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00bfff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        /* QR Glow */
+        .qr-container {
+            transition: box-shadow 0.3s ease;
+        }
+
+        .qr-container:hover {
+            box-shadow: 0 0 50px rgba(0, 191, 255, 0.2);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00bfff; }
+
+        /* Focus States */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #00bfff;
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-cyber-black min-h-screen">
+
+    <!-- ==========================================
+         NAVIGATION (Glassmorphism)
+         ========================================== -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 h-16" role="navigation" aria-label="Navegación principal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#hero" class="font-heading font-bold text-xl text-white flex items-center gap-2">
+                <span class="text-cyber-cyan">[</span>
+                <span>EHR</span>
+                <span class="text-cyber-cyan">]</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#status" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">STATUS</a>
+                <a href="#ai-systems" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">AI SYSTEMS</a>
+                <a href="#fullstack" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">FULL-STACK</a>
+                <a href="#offensive" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">OFFENSIVE</a>
+                <a href="#skills" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">SKILLS</a>
+                <a href="#timeline" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">INTEL</a>
+                <a href="#contact" class="nav-link text-sm text-gray-400 hover:text-cyber-cyan transition-colors font-mono">CONTACT</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="#contact"
+               class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan text-sm font-mono font-medium rounded-lg hover:bg-cyber-cyan/20 transition-all">
+                <i class="fas fa-terminal text-xs"></i>
+                CONNECT
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button id="menuToggle" class="lg:hidden text-white p-2" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 bg-cyber-black/98 border-l border-cyber-border lg:hidden">
+            <div class="flex flex-col p-6 gap-1">
+                <a href="#status" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">STATUS</a>
+                <a href="#ai-systems" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">AI SYSTEMS</a>
+                <a href="#fullstack" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">FULL-STACK</a>
+                <a href="#offensive" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">OFFENSIVE</a>
+                <a href="#skills" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">SKILLS</a>
+                <a href="#timeline" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 border-b border-cyber-border font-mono text-sm">INTEL</a>
+                <a href="#contact" class="text-gray-400 hover:text-cyber-cyan transition-colors py-3 px-4 font-mono text-sm">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ==========================================
+             HERO SECTION (Command Center)
+             ========================================== -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center grid-pattern overflow-hidden">
+            <!-- Radial Gradient -->
+            <div class="absolute inset-0 bg-gradient-radial from-cyber-cyan/5 via-transparent to-cyber-black pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-4 pt-24 pb-16 text-center">
+                <!-- Avatar with Animated Ring -->
+                <div class="mb-8 reveal flex justify-center">
+                    <div class="avatar-container">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-img">
+                            <img src="foto2.png" alt="Elvis Huayna Rivera - AI Engineer & Cybersecurity Specialist" loading="eager">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Badge -->
+                <div class="reveal mb-6">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider">
+                        <span class="w-2 h-2 bg-cyber-green rounded-full status-dot"></span>
+                        <i class="fas fa-terminal text-xs"></i>
+                        SYSTEM ONLINE
+                    </span>
+                </div>
+
+                <!-- Name with Typing -->
+                <h1 class="reveal font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 tracking-tight">
+                    <span id="typedName" class="cursor"></span>
+                </h1>
+
+                <!-- Titles -->
+                <h2 class="reveal font-mono font-medium text-base sm:text-lg md:text-xl text-cyber-cyan mb-2 tracking-wide">
+                    AI ENGINEER | CYBERSECURITY SPECIALIST | FULL-STACK DEVELOPER
+                </h2>
+
+                <p class="reveal text-gray-400 max-w-2xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
+                    Diseñando sistemas inteligentes seguros. Especializado en arquitecturas LLM, RAG,
+                    Chatbots empresariales y aplicaciones web con hardening de seguridad. Blue Team oriented.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://www.linkedin.com/in/elvis-alberto-huayna-rivera-84906a37b/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-cyber-cyan text-cyber-black font-semibold rounded-lg hover:bg-opacity-90 transition-all font-mono text-sm">
+                        <i class="fab fa-linkedin text-xl"></i>
+                        LINKEDIN PROFILE
+                    </a>
+                    <a href="#contact"
+                       class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-cyber-border text-white font-semibold rounded-lg hover:border-cyber-cyan transition-all font-mono text-sm">
+                        <i class="fas fa-shield-halved text-lg"></i>
+                        SECURE CONTACT
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 reveal">
+                    <div class="flex flex-col items-center gap-2 text-gray-600">
+                        <span class="text-xs uppercase tracking-widest font-mono">Scroll</span>
+                        <i class="fas fa-chevron-down animate-bounce text-cyber-cyan"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             STATUS BAR
+             ========================================== -->
+        <section id="status" class="bg-cyber-card/80 border-y border-cyber-border py-4">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-wrap justify-center md:justify-between items-center gap-4 text-xs font-mono">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-2 w-2">
+                            <span class="status-dot absolute inline-flex h-full w-full rounded-full bg-cyber-green"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyber-green"></span>
+                        </span>
+                        <span class="text-white">STATUS: <span class="text-cyber-green font-medium">ACTIVE</span></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <i class="fas fa-map-marker-alt text-cyber-cyan text-xs"></i>
+                        <span>LOCATION: <span class="text-white font-medium">AREQUIPA, PE</span></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <i class="fas fa-brain text-cyber-cyan text-xs"></i>
+                        <span>AI FOCUS: <span class="text-white font-medium">LLM + RAG</span></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <i class="fas fa-shield-halved text-cyber-cyan text-xs"></i>
+                        <span>SEC: <span class="text-white font-medium">BLUE TEAM</span></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <i class="fas fa-code text-cyber-cyan text-xs"></i>
+                        <span>DEV: <span class="text-white font-medium">FULL-STACK</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION DIVIDER
+             ========================================== -->
+        <div class="section-divider"></div>
+
+        <!-- ==========================================
+             AI SYSTEMS & LLM ARCHITECTURE
+             ========================================== -->
+        <section id="ai-systems" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-robot text-xs"></i>
+                        AI SYSTEMS DIVISION
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">IA Systems & LLM Architecture</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Construyendo asistentes inteligentes con modelos locales. Privacidad, seguridad y control total.</p>
+                </div>
+
+                <!-- Main AI Card -->
+                <div class="cyber-card rounded-2xl p-8 mb-8 reveal">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-cyber-cyan/10 rounded-2xl flex items-center justify-center mb-4">
+                                <i class="fas fa-brain text-cyber-cyan text-3xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-white mb-2">JARVIS AI Assistant</h3>
+                            <span class="badge px-3 py-1 rounded-full text-xs font-mono">PRODUCTION</span>
+                        </div>
+
+                        <div class="lg:w-2/3 space-y-4">
+                            <p class="text-gray-300 leading-relaxed">
+                                Asistente virtual inteligente construido con <strong class="text-cyber-cyan">Python</strong>,
+                                <strong class="text-cyber-cyan">LangChain</strong> y <strong class="text-cyber-cyan">Ollama</strong>
+                                para ejecución de modelos LLM localmente. Sin dependencia de servicios cloud.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Python</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">LangChain</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Ollama</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">ChromaDB</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Embeddings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAG System Card -->
+                <div class="cyber-card rounded-2xl p-8 mb-8 reveal">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-cyber-green/10 rounded-2xl flex items-center justify-center mb-4">
+                                <i class="fas fa-database text-cyber-green text-3xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-white mb-2">RAG System</h3>
+                            <span class="badge-cyan px-3 py-1 rounded-full text-xs font-mono">AUGMENTED</span>
+                        </div>
+
+                        <div class="lg:w-2/3 space-y-4">
+                            <p class="text-gray-300 leading-relaxed">
+                                Implementación de <strong class="text-cyber-green">Retrieval Augmented Generation</strong>
+                                para consultar documentos privados de forma segura. El sistema recupera información relevante
+                                y la integra en las respuestas del modelo, manteniendo la privacidad de los datos.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Vector DB</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Embeddings</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Document Loading</span>
+                                <span class="tech-tag px-3 py-1 rounded text-xs font-mono text-gray-300">Semantic Search</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
+                    <!-- Chatbot Enterprise -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-comments text-cyber-cyan text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-lg text-white">Chatbot Enterprise</h4>
+                                <span class="badge px-2 py-0.5 rounded text-xs font-mono">B2B</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Chatbots personalizados para empresas. Integración con bases de conocimiento internas,
+                            soporte 24/7 y escalation a agentes humanos.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">LangChain</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Streamlit</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">FAISS</span>
+                        </div>
+                    </div>
+
+                    <!-- Voice Assistant -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-microphone text-cyber-cyan text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-lg text-white">Voice Interface</h4>
+                                <span class="badge-cyan px-2 py-0.5 rounded text-xs font-mono">STT/TTS</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Interfaces de voz para asistentes. Speech-to-text y text-to-speech
+                            con modelos locales para privacidad total.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Whisper</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Coqui TTS</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">PyAudio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             FULL-STACK SECURE DEVELOPMENT
+             ========================================== -->
+        <section id="fullstack" class="py-20 md:py-28 bg-cyber-card/50">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-code text-xs"></i>
+                        DEVELOPMENT DIVISION
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Full-Stack Secure Development</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Aplicaciones web con hardening de seguridad. Interfaces de monitoreo y dashboards SOC.</p>
+                </div>
+
+                <!-- Arsenal Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 stagger-children">
+                    <div class="cyber-card rounded-xl p-4 text-center">
+                        <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+                        <p class="text-white font-mono text-sm">HTML5</p>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 text-center">
+                        <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>
+                        <p class="text-white font-mono text-sm">CSS3</p>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 text-center">
+                        <i class="fab fa-js text-3xl text-yellow-400 mb-2"></i>
+                        <p class="text-white font-mono text-sm">JavaScript</p>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 text-center">
+                        <i class="fab fa-php text-3xl text-indigo-400 mb-2"></i>
+                        <p class="text-white font-mono text-sm">PHP</p>
+                    </div>
+                </div>
+
+                <!-- Main Development Card -->
+                <div class="cyber-card rounded-2xl p-8 mb-8 reveal">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-cyber-cyan/10 rounded-2xl flex items-center justify-center mb-4">
+                                <i class="fas fa-server text-cyber-cyan text-3xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-white mb-2">Secure Web Applications</h3>
+                            <span class="badge px-3 py-1 rounded-full text-xs font-mono">HARDENED</span>
+                        </div>
+
+                        <div class="lg:w-2/3 space-y-4">
+                            <p class="text-gray-300 leading-relaxed">
+                                Desarrollo de <strong class="text-cyber-cyan">interfaces de monitoreo</strong>,
+                                <strong class="text-cyber-cyan">dashboards SOC</strong> y
+                                <strong class="text-cyber-cyan">aplicaciones web empresariales</strong>
+                                con enfoque en seguridad del lado del servidor y del cliente.
+                            </p>
+                            <ul class="space-y-2 text-gray-400 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-cyber-green text-xs"></i>
+                                    Validación de inputs y sanitización de outputs
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-cyber-green text-xs"></i>
+                                    Headers de seguridad (CSP, X-XSS-Protection, HSTS)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-cyber-green text-xs"></i>
+                                    Protección contra XSS, CSRF, SQL Injection
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-cyber-green text-xs"></i>
+                                    JWT/Sessions seguras con HTTPOnly cookies
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
+                    <!-- Monitoring Dashboard -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 bg-cyber-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-cyber-green text-xl"></i>
+                            </div>
+                            <h4 class="font-heading font-semibold text-lg text-white">SOC Dashboards</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Interfaces de monitoreo en tiempo real para centros de operaciones de seguridad.
+                            Visualización de eventos, alertas y métricas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">TailwindCSS</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">JavaScript</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Chart.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Secure Forms -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-forms text-cyber-cyan text-xl"></i>
+                            </div>
+                            <h4 class="font-heading font-semibold text-lg text-white">Secure Forms</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Formularios con validación robusta, CAPTCHA, rate limiting
+                            y protección contra inyecciones maliciosas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">PHP</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">jQuery</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Landing Pages -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-globe text-cyber-cyan text-xl"></i>
+                            </div>
+                            <h4 class="font-heading font-semibold text-lg text-white">Landing Pages</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Páginas web responsivas optimizadas para SEO y rendimiento.
+                            Diseño UX/UI profesional con accesibilidad.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">HTML5</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">CSS3</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION DIVIDER
+             ========================================== -->
+        <div class="section-divider"></div>
+
+        <!-- ==========================================
+             OFFENSIVE OPERATIONS LAB
+             ========================================== -->
+        <section id="offensive" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-green/10 border border-cyber-green/20 rounded-full text-cyber-green text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-skull text-xs"></i>
+                        OFFENSIVE SECURITY
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Offensive Operations Lab</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Pentesting y auditorías de seguridad en entornos controlados. Hacking ético responsable.</p>
+                </div>
+
+                <!-- Main Offensive Card -->
+                <div class="cyber-card rounded-2xl p-8 mb-8 reveal border-cyber-green/20">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-cyber-green/10 rounded-2xl flex items-center justify-center mb-4">
+                                <i class="fas fa-bug text-cyber-green text-3xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-white mb-2">Pentesting & Audits</h3>
+                            <span class="badge px-3 py-1 rounded-full text-xs font-mono">ETHICAL</span>
+                        </div>
+
+                        <div class="lg:w-2/3 space-y-4">
+                            <p class="text-gray-300 leading-relaxed">
+                                Realización de <strong class="text-cyber-green">pruebas de penetración</strong>
+                                y <strong class="text-cyber-green">auditorías de vulnerabilidades</strong> en sistemas
+                                y aplicaciones web, utilizando metodologías OWASP y PTES en
+                                <strong class="text-white">entornos controlados de virtualización y nube</strong>.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-cyber-black/50 rounded-lg p-4">
+                                    <h5 class="text-cyber-green font-mono text-sm mb-2">Vulnerability Assessment</h5>
+                                    <p class="text-gray-400 text-xs">Identificación y clasificación de vulnerabilidades en sistemas</p>
+                                </div>
+                                <div class="bg-cyber-black/50 rounded-lg p-4">
+                                    <h5 class="text-cyber-green font-mono text-sm mb-2">Exploitation</h5>
+                                    <p class="text-gray-400 text-xs">Pruebas de explotación controlada en sistemas Linux/Ubuntu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab Environment Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+                    <!-- Kali Linux -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 bg-cyber-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-linux text-cyber-green text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-lg text-white">Kali Linux</h4>
+                                <span class="badge px-2 py-0.5 rounded text-xs font-mono">PRIMARY</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Distribución líder en seguridad ofensiva. Suite completa de herramientas
+                            para penetration testing y forensic analysis.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Metasploit</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Nmap</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Burp Suite</span>
+                        </div>
+                    </div>
+
+                    <!-- Ubuntu Labs -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-ubuntu text-cyber-cyan text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-lg text-white">Ubuntu Server</h4>
+                                <span class="badge-cyan px-2 py-0.5 rounded text-xs font-mono">TARGET</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Servidores Ubuntu para práctica de hardening, configuración segura
+                            y auditoría de servicios.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">SSH Hardening</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Firewall</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Updates</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Environment -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 bg-cyber-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cloud text-cyber-cyan text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-lg text-white">Cloud Labs</h4>
+                                <span class="badge-cyan px-2 py-0.5 rounded text-xs font-mono">VPC</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Entornos cloud para simulación de ataques en infraestructura moderna.
+                            AWS y Azure labs.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">AWS</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">Azure</span>
+                            <span class="tech-tag px-2 py-0.5 rounded text-xs font-mono">VPC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Platforms -->
+                <div class="mt-12 reveal">
+                    <h4 class="font-heading font-semibold text-lg text-white mb-6 text-center">
+                        <i class="fas fa-graduation-cap text-cyber-cyan mr-2"></i>
+                        Training Platforms
+                    </h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="cyber-card px-6 py-3 rounded-xl flex items-center gap-3">
+                            <i class="fas fa-shield-halved text-cyber-green"></i>
+                            <span class="font-mono text-sm text-gray-300">TryHackMe</span>
+                        </div>
+                        <div class="cyber-card px-6 py-3 rounded-xl flex items-center gap-3">
+                            <i class="fas fa-bug text-cyber-green"></i>
+                            <span class="font-mono text-sm text-gray-300">Let's Defend</span>
+                        </div>
+                        <div class="cyber-card px-6 py-3 rounded-xl flex items-center gap-3">
+                            <i class="fas fa-lock text-cyber-green"></i>
+                            <span class="font-mono text-sm text-gray-300">HackTheBox</span>
+                        </div>
+                        <div class="cyber-card px-6 py-3 rounded-xl flex items-center gap-3">
+                            <i class="fas fa-terminal text-cyber-green"></i>
+                            <span class="font-mono text-sm text-gray-300">PortSwigger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TECHNICAL SKILLS MATRIX
+             ========================================== -->
+        <section id="skills" class="py-20 md:py-28 bg-cyber-card/50">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-matrix text-xs"></i>
+                        SKILL MATRIX
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Technical Arsenal</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">Stack tecnológico y herramientas de trabajo.</p>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+                    <!-- AI & LLM -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-robot text-cyber-cyan"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">AI & LLM</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Python/LangChain</span>
+                                    <span class="text-cyber-cyan">88%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Ollama/LM Studio</span>
+                                    <span class="text-cyber-cyan">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">RAG Systems</span>
+                                    <span class="text-cyber-green">80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Networking -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-network-wired text-cyber-cyan"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">Networking</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">TCP/IP, DNS, DHCP</span>
+                                    <span class="text-cyber-cyan">92%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Packet Tracer</span>
+                                    <span class="text-cyber-cyan">88%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Wireshark</span>
+                                    <span class="text-cyber-cyan">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-code text-cyber-cyan"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">Web Dev</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">HTML/CSS/JS</span>
+                                    <span class="text-cyber-cyan">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">PHP/MySQL</span>
+                                    <span class="text-cyber-cyan">75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">TailwindCSS</span>
+                                    <span class="text-cyber-green">82%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="82"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-green/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shield-halved text-cyber-green"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">Security</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">SIEM/EDR</span>
+                                    <span class="text-cyber-green">72%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="72"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Blue Team</span>
+                                    <span class="text-cyber-green">78%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="78"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">PenTesting</span>
+                                    <span class="text-cyber-cyan">65%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python & Scripting -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-python text-cyber-cyan"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">Python</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Scripting</span>
+                                    <span class="text-cyber-cyan">82%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="82"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Automation</span>
+                                    <span class="text-cyber-cyan">78%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="78"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Security Tools</span>
+                                    <span class="text-cyber-green">70%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="cyber-card rounded-xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cloud text-cyber-cyan"></i>
+                            </div>
+                            <span class="font-heading font-semibold text-white">Cloud</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">AWS Basics</span>
+                                    <span class="text-cyber-cyan">58%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="58"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Azure Basics</span>
+                                    <span class="text-cyber-cyan">52%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-cyan to-cyber-green rounded-full" data-width="52"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-mono mb-1">
+                                    <span class="text-gray-400">Linux Server</span>
+                                    <span class="text-cyber-green">75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-gradient-to-r from-cyber-green to-cyber-cyan rounded-full" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION DIVIDER
+             ========================================== -->
+        <div class="section-divider"></div>
+
+        <!-- ==========================================
+             TIMELINE (Intelligence History)
+             ========================================== -->
+        <section id="timeline" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-history text-xs"></i>
+                        INTELLIGENCE HISTORY
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Timeline</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">Educación y experiencia profesional.</p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative">
+                        <!-- Vertical Line -->
+                        <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyber-cyan via-cyber-green to-cyber-border"></div>
+
+                        <!-- Items -->
+                        <div class="space-y-12">
+                            <!-- SENATI -->
+                            <div class="reveal relative flex flex-col md:flex-row gap-8 md:gap-0">
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="cyber-card rounded-xl p-6 inline-block text-left md:text-right">
+                                        <span class="text-cyber-cyan text-xs font-mono">2024 - 2026</span>
+                                        <h3 class="font-heading font-semibold text-lg text-white mt-1">Ingeniería en Ciberseguridad</h3>
+                                        <p class="text-cyber-green text-sm font-medium mt-1">
+                                            <i class="fas fa-graduation-cap mr-1"></i> SENATI
+                                        </p>
+                                        <p class="text-gray-400 text-sm mt-2">Formación en seguridad ofensiva/defensiva, análisis de amenazas, arquitectura de redes seguras.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-0 md:left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyber-cyan border-4 border-cyber-black shadow-lg shadow-cyber-cyan/30"></div>
+                                <div class="md:w-1/2 md:pl-12"></div>
+                            </div>
+
+                            <!-- CEPROTEC -->
+                            <div class="reveal relative flex flex-col md:flex-row gap-8 md:gap-0">
+                                <div class="md:w-1/2 md:pr-12"></div>
+                                <div class="absolute left-0 md:left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyber-border border-4 border-cyber-black"></div>
+                                <div class="md:w-1/2 md:pl-12">
+                                    <div class="cyber-card rounded-xl p-6 inline-block text-left">
+                                        <span class="text-cyber-cyan text-xs font-mono">2018</span>
+                                        <h3 class="font-heading font-semibold text-lg text-white mt-1">Formación Técnica en Informática</h3>
+                                        <p class="text-cyber-green text-sm font-medium mt-1">
+                                            <i class="fas fa-certificate mr-1"></i> CEPROTEC Arequipa
+                                        </p>
+                                        <p class="text-gray-400 text-sm mt-2">Sistemas, redes y soporte técnico.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CETPRO -->
+                            <div class="reveal relative flex flex-col md:flex-row gap-8 md:gap-0">
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="cyber-card rounded-xl p-6 inline-block text-left md:text-right">
+                                        <span class="text-cyber-cyan text-xs font-mono">2020</span>
+                                        <h3 class="font-heading font-semibold text-lg text-white mt-1">Mantenimiento y Ensamblaje</h3>
+                                        <p class="text-cyber-green text-sm font-medium mt-1">
+                                            <i class="fas fa-tools mr-1"></i> CETPRO Zepita
+                                        </p>
+                                        <p class="text-gray-400 text-sm mt-2">Hardware, diagnóstico y ensamblaje de computadoras.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-0 md:left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyber-border border-4 border-cyber-black"></div>
+                                <div class="md:w-1/2 md:pl-12"></div>
+                            </div>
+
+                            <!-- Freelance -->
+                            <div class="reveal relative flex flex-col md:flex-row gap-8 md:gap-0">
+                                <div class="md:w-1/2 md:pr-12"></div>
+                                <div class="absolute left-0 md:left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyber-green border-4 border-cyber-black shadow-lg shadow-cyber-green/30"></div>
+                                <div class="md:w-1/2 md:pl-12">
+                                    <div class="cyber-card rounded-xl p-6 inline-block text-left border-cyber-green/20">
+                                        <span class="text-cyber-green text-xs font-mono">2022 - PRESENT</span>
+                                        <h3 class="font-heading font-semibold text-lg text-white mt-1">Técnico Freelance</h3>
+                                        <p class="text-gray-300 text-sm mt-2">Mantenimiento, reparación, instalación, optimización y recuperación de datos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soporte TI -->
+                            <div class="reveal relative flex flex-col md:flex-row gap-8 md:gap-0">
+                                <div class="md:w-1/2 md:pr-12 md:text-right">
+                                    <div class="cyber-card rounded-xl p-6 inline-block text-left md:text-right">
+                                        <span class="text-cyber-cyan text-xs font-mono">2025 - 2026</span>
+                                        <h3 class="font-heading font-semibold text-lg text-white mt-1">Soporte TI</h3>
+                                        <p class="text-cyber-green text-sm font-medium mt-1">
+                                            <i class="fas fa-building mr-1"></i> Centro Educativo Mariano Melgar
+                                        </p>
+                                        <p class="text-gray-400 text-sm mt-2">Diagnóstico, redes básicas, resolución de incidencias.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-0 md:left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-cyber-border border-4 border-cyber-black"></div>
+                                <div class="md:w-1/2 md:pl-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECURE CONTACT
+             ========================================== -->
+        <section id="contact" class="py-20 md:py-28 bg-cyber-card/50">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded-full text-cyber-cyan text-xs font-mono tracking-wider mb-4">
+                        <i class="fas fa-lock text-xs"></i>
+                        SECURE CHANNEL
+                    </span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Contacto Seguro</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">Conectemos. Canales directos y código QR para LinkedIn.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Contact Info -->
+                    <div class="reveal">
+                        <h3 class="font-heading font-semibold text-xl text-white mb-6">Información de Contacto</h3>
+
+                        <div class="space-y-4 mb-8">
+                            <!-- Phone -->
+                            <a href="tel:+51942246555"
+                               class="cyber-card flex items-center gap-4 p-4 rounded-xl hover:border-cyber-cyan transition-colors group cursor-pointer">
+                                <div class="w-12 h-12 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-cyber-cyan text-lg"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-400 text-sm font-mono">TELEFONO</span>
+                                    <p class="text-white font-medium">+51 942 246 555</p>
+                                </div>
+                                <i class="fas fa-copy text-gray-500 group-hover:text-cyber-cyan transition-colors"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:huaynriveraelvis@gmail.com"
+                               class="cyber-card flex items-center gap-4 p-4 rounded-xl hover:border-cyber-cyan transition-colors group">
+                                <div class="w-12 h-12 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-cyber-cyan text-lg"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-400 text-sm font-mono">EMAIL</span>
+                                    <p class="text-white font-medium text-sm">huaynriveraelvis@gmail.com</p>
+                                </div>
+                                <i class="fas fa-copy text-gray-500 group-hover:text-cyber-cyan transition-colors"></i>
+                            </a>
+
+                            <!-- Location -->
+                            <div class="cyber-card flex items-center gap-4 p-4 rounded-xl">
+                                <div class="w-12 h-12 bg-cyber-cyan/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-cyber-cyan text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 text-sm font-mono">UBICACION</span>
+                                    <p class="text-white font-medium">Arequipa, Perú</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Button -->
+                        <a href="https://www.linkedin.com/in/elvis-alberto-huayna-rivera-84906a37b/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-3 w-full justify-center px-6 py-4 bg-linkedin text-white font-semibold rounded-xl hover:bg-opacity-90 transition-all font-mono text-sm">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                            LINKEDIN PROFILE
+                        </a>
+                    </div>
+
+                    <!-- QR Code -->
+                    <div class="reveal">
+                        <h3 class="font-heading font-semibold text-xl text-white mb-6 text-center lg:text-left">LinkedIn QR Code</h3>
+
+                        <div class="cyber-card qr-container rounded-2xl p-8 text-center">
+                            <div class="mb-4">
+                                <i class="fab fa-linkedin text-4xl text-cyber-cyan mb-2"></i>
+                                <p class="text-gray-400 text-sm font-mono">SCAN TO CONNECT</p>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-xl inline-block mb-4">
+                                <div id="qrCode" class="w-48 h-48 mx-auto"></div>
+                            </div>
+
+                            <p class="text-gray-500 text-xs font-mono">
+                                <i class="fas fa-shield-halved mr-1"></i>
+                                SECURE LINK - VERIFIED
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="bg-cyber-black border-t border-cyber-border py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-heading font-bold text-lg text-white">
+                        <span class="text-cyber-cyan">[</span>EAHR<span class="text-cyber-cyan">]</span>
+                    </span>
+                    <span class="text-gray-600 text-sm">|</span>
+                    <span class="text-gray-400 text-sm font-mono">AI ENGINEER & SECURITY SPECIALIST</span>
+                </div>
+
+                <div class="flex items-center gap-6 text-sm text-gray-500 font-mono">
+                    <a href="#hero" class="hover:text-cyber-cyan transition-colors">HOME</a>
+                    <a href="#ai-systems" class="hover:text-cyber-cyan transition-colors">AI</a>
+                    <a href="#offensive" class="hover:text-cyber-cyan transition-colors">OFFENSIVE</a>
+                    <a href="#contact" class="hover:text-cyber-cyan transition-colors">CONTACT</a>
+                </div>
+
+                <p class="text-gray-500 text-sm font-mono">
+                    &copy; 2024 Elvis Huayna Rivera
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
+        <div class="cyber-card flex items-center gap-3 px-5 py-3 rounded-xl border-cyber-green/30">
+            <i class="fas fa-check-circle text-cyber-green text-lg"></i>
+            <span id="toastMessage" class="text-white text-sm font-mono">Copiado</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT - Main Application
+         ========================================== -->
+    <script>
+        /**
+         * =============================================
+         * PORTFOLIO v3.0 - AI & CYBERSECURITY
+         * Elvis Alberto Huayna Rivera
+         * =============================================
+         */
+        (function() {
+            'use strict';
+
+            // Configuration
+            const CONFIG = {
+                linkedInUrl: 'https://www.linkedin.com/in/elvis-alberto-huayna-rivera-84906a37b/',
+                phoneNumber: '+51942246555',
+                emailAddress: 'huaynriveraelvis@gmail.com',
+                typingSpeed: 100,
+                deleteSpeed: 50,
+                pauseDuration: 3000
+            };
+
+            // DOM Elements
+            const $ = (sel) => document.querySelector(sel);
+            const $$ = (sel) => document.querySelectorAll(sel);
+
+            const elements = {
+                typedName: $('#typedName'),
+                menuToggle: $('#menuToggle'),
+                mobileMenu: $('#mobileMenu'),
+                qrCode: $('#qrCode'),
+                toast: $('#toast'),
+                toastMessage: $('#toastMessage'),
+                skillFills: $$('.skill-bar-fill'),
+                revealElements: $$('.reveal'),
+                staggerElements: $$('.stagger-children'),
+                navLinks: $$('.nav-link')
+            };
+
+            // =============================================
+            // Typing Effect
+            // =============================================
+            class TypeWriter {
+                constructor(el, text, speed, deleteSpeed, pause) {
+                    this.el = el;
+                    this.text = text;
+                    this.speed = speed;
+                    this.deleteSpeed = deleteSpeed;
+                    this.pause = pause;
+                    this.index = 0;
+                    this.isDeleting = false;
+                }
+
+                type() {
+                    const isComplete = !this.isDeleting && this.index === this.text.length;
+                    const shouldDelete = this.isDeleting && this.index === 0;
+
+                    if (shouldDelete) {
+                        this.isDeleting = false;
+                        setTimeout(() => this.type(), this.pause);
+                        return;
+                    }
+
+                    if (isComplete) {
+                        this.el.classList.remove('cursor');
+                        setTimeout(() => {
+                            this.isDeleting = true;
+                            this.el.classList.add('cursor');
+                            this.type();
+                        }, this.pause);
+                        return;
+                    }
+
+                    this.el.textContent = this.text.substring(0, this.index + (this.isDeleting ? 0 : 1));
+
+                    if (this.isDeleting) {
+                        this.index--;
+                    } else {
+                        this.index++;
+                    }
+
+                    setTimeout(() => this.type(), this.isDeleting
+                        ? this.deleteSpeed + Math.random() * 30
+                        : this.speed + Math.random() * 50
+                    );
+                }
+
+                start() {
+                    this.el.classList.add('cursor');
+                    this.type();
+                }
+            }
+
+            // =============================================
+            // Intersection Observer - Scroll Reveal
+            // =============================================
+            function initScrollReveal() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+
+                            // Animate skill bars
+                            if (entry.target.classList.contains('stagger-children')) {
+                                entry.target.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+                                    setTimeout(() => {
+                                        bar.style.width = bar.dataset.width + '%';
+                                    }, i * 100);
+                                });
+                            }
+
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                elements.revealElements.forEach(el => observer.observe(el));
+                elements.staggerElements.forEach(el => observer.observe(el));
+            }
+
+            // =============================================
+            // Skill Bars Animation
+            // =============================================
+            function initSkillBars() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.style.width = entry.target.dataset.width + '%';
+                            }, 200);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                elements.skillFills.forEach(bar => observer.observe(bar));
+            }
+
+            // =============================================
+            // QR Code Generation
+            // =============================================
+            function initQRCode() {
+                if (typeof QRCode !== 'undefined' && elements.qrCode) {
+                    try {
+                        elements.qrCode.innerHTML = '';
+                        new QRCode(elements.qrCode, {
+                            text: CONFIG.linkedInUrl,
+                            width: 180,
+                            height: 180,
+                            colorDark: '#050505',
+                            colorLight: '#ffffff',
+                            correctLevel: QRCode.CorrectLevel.M
+                        });
+                    } catch (error) {
+                        elements.qrCode.innerHTML = `
+                            <div class="text-center p-4">
+                                <a href="${CONFIG.linkedInUrl}" target="_blank"
+                                   class="text-cyber-cyan hover:underline text-sm font-mono">
+                                    Abrir LinkedIn
+                                </a>
+                            </div>
+                        `;
+                    }
+                }
+            }
+
+            // =============================================
+            // Mobile Menu
+            // =============================================
+            function initMobileMenu() {
+                elements.menuToggle.addEventListener('click', () => {
+                    const isOpen = elements.mobileMenu.classList.contains('open');
+                    elements.mobileMenu.classList.toggle('open');
+                    elements.menuToggle.setAttribute('aria-expanded', !isOpen);
+
+                    const icon = elements.menuToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+
+                $$('#mobileMenu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        elements.mobileMenu.classList.remove('open');
+                        elements.menuToggle.querySelector('i').classList.remove('fa-times');
+                        elements.menuToggle.querySelector('i').classList.add('fa-bars');
+                    });
+                });
+            }
+
+            // =============================================
+            // Copy to Clipboard
+            // =============================================
+            function initClipboard() {
+                $$('a[href^="tel"], a[href^="mailto"]').forEach(link => {
+                    link.addEventListener('click', async function(e) {
+                        e.preventDefault();
+                        const href = this.getAttribute('href');
+                        let text = href.startsWith('tel:') ? CONFIG.phoneNumber : CONFIG.emailAddress;
+
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            showToast(`${text} copiado`);
+                        } catch {
+                            const ta = document.createElement('textarea');
+                            ta.value = text;
+                            ta.style.cssText = 'position:fixed;opacity:0';
+                            document.body.appendChild(ta);
+                            ta.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(ta);
+                            showToast(`${text} copiado`);
+                        }
+                    });
+                });
+            }
+
+            // =============================================
+            // Toast Notification
+            // =============================================
+            function showToast(message) {
+                elements.toastMessage.textContent = message;
+                elements.toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+
+                setTimeout(() => {
+                    elements.toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                }, 3000);
+            }
+
+            // =============================================
+            // Active Navigation
+            // =============================================
+            function initActiveNav() {
+                const sections = $$('section[id]');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute('id');
+                            elements.navLinks.forEach(link => {
+                                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                            });
+                        }
+                    });
+                }, { rootMargin: '-20% 0px -80% 0px', threshold: 0 });
+
+                sections.forEach(section => observer.observe(section));
+            }
+
+            // =============================================
+            // Initialize
+            // =============================================
+            function init() {
+                // Start typing effect
+                const tw = new TypeWriter(
+                    elements.typedName,
+                    'Elvis Huayna Rivera',
+                    CONFIG.typingSpeed,
+                    CONFIG.deleteSpeed,
+                    CONFIG.pauseDuration
+                );
+
+                // Init modules
+                initScrollReveal();
+                initSkillBars();
+                initQRCode();
+                initMobileMenu();
+                initClipboard();
+                initActiveNav();
+
+                // Start typing after delay
+                setTimeout(() => tw.start(), 500);
+
+                console.log('%c🛡️ Portfolio v3.0 Initialized', 'color: #00bfff; font-weight: bold;');
+                console.log('%c   AI Engineering | Cybersecurity | Full-Stack', 'color: #00ff7f;');
+            }
+
+            // Run
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>
